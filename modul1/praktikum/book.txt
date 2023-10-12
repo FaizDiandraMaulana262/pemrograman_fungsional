@@ -1,0 +1,2 @@
+['ID01', 'Buku Pemrograman', 2]
+['ID02', 'Buku Menggambar', 1]
