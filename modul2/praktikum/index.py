@@ -44,14 +44,8 @@ def main():
 
 def set_board(matrix):
     board = []
-    board_column = []
     board_pattern = "-"
-    
-    for x in range(matrix[0]):
-        for y in range(matrix[1]):
-            board_column.append(board_pattern)
-        board.append(board_column)
-        board_column = []
+    board = [[board_pattern for y in range(matrix[1])] for x in range(matrix[0])]
 
     return board
     
@@ -100,10 +94,9 @@ def set_enemy(board, enemy):
     
     return game_board
 
-def set_position(matrix): return [random.randrange(0, matrix[0] - 1), random.randrange(0, matrix[1] - 1)]
+set_position = lambda matrix : [random.randrange(0, matrix[0] - 1), random.randrange(0, matrix[1] - 1)]
 
 def player_move(user):
-    test = []
     user_input = str(input("Masukan Movement : "))
 
     for i in user_input:
