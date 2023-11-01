@@ -17,7 +17,6 @@ def mapData(datas):
     
     for x, y in enumerate(datas):
         data.append({"Ratusam": ratusan[x], "Puluhan": puluhan[x], "Satuan":satuan[x]})
-    # for i in len(datas):
     
     return data
 
